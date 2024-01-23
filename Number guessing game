@@ -1,0 +1,31 @@
+#include<iostream>
+#include<cstdlib>
+using namespace std;
+int main()
+{
+	int secretNo = rand()%100+1;
+	int Guess;
+	int attempts = 0;
+	cout<<"Welcome to Number guessing game!"<<endl;
+	cout<<"Guess number between 1 and 100"<<endl;
+	do
+	{
+		cout<<"Enter your guess: ";
+		cin>>Guess;
+		if(Guess>secretNo)
+		{
+			cout<<"Your guess is too high! Try again."<<endl;
+		}
+		else if(Guess<secretNo)
+		{
+			cout<<"Your guess is too low! Try again."<<endl;
+		}
+		else
+		{
+			cout<<"Congratulations! Your guess was correct"<<endl;
+		}
+		attempts++;
+	}
+	while(Guess!=secretNo);
+	return 0;
+}
